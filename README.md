@@ -48,6 +48,8 @@ executables will be available in the `build` directory:
 
 ## Reproducing Figures
 
+### Data
+
 After building the project, the following executables will be available in the `build` directory:
 
 * `leading_eight_with_errors`
@@ -79,13 +81,20 @@ leading_eight_ESS_with_errors.csv
 README.md
 ```
 
-<!-- To ceratyye the figure run the python script. 
+### Figures
 
-`src`. 
+To replicate the figures of the manuscript, run the Python script `generate_figures.py`.
+If you're in the root directory, use the command:
 
-if you are in the root write. fdollowing by the focation of the FDigure folder.
+```bash
+python scripts/generate_figures.py Data/
+```
 
-If you are intersted in the indivial code  that creates eeach figure, the scipts
-can also be found the in the scripts folder.
+The script takes the path to the folder containing the data as an argument,
+and it saves the output in the `Figures` folder.
 
-- Gebnerates Figure 1 an 3 -->
+If you're interested in the individual code used to generate each figure, the corresponding scripts can be found in the `scripts` folder:
+
+* `generate_figure_l8_errors.py`: generates Figures 1 and 4
+* `generate_figure_equalizers.py`: generates Figure 2
+* `generate_figure_l3_l6_payoffs.py`: generates Figure 3
