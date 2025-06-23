@@ -10,6 +10,7 @@ Hilbe, and Yohsuke Murase.
 
 The code is written in C++, and the plotting scripts are in Python.
 
+
 ## Build
 
 To build the project, clone the repository and use CMake:
@@ -22,6 +23,7 @@ cd build
 cmake ..
 cmake --build .
 ```
+
 
 ## Source Code and Executables
 
@@ -43,3 +45,47 @@ executables will be available in the `build` directory:
 * `test_norms_with_punishment`: Unit tests for `NormsWithPunishment.hpp`, including those used in Table 3.
 * `main_nash_search_with_P`: Verifies the results shown in Table 3.
 
+
+## Reproducing Figures
+
+After building the project, the following executables will be available in the `build` directory:
+
+* `leading_eight_with_errors`
+* `equalizers_norms`
+* `L6_L3_payoff_difference`
+
+These generate the data necessary for creating the figures in the manuscript. To
+run them, you need to specify an output location. We recommend using the `Data`
+folder provided in the repository.
+
+To run a script from the `build` folder:
+
+```bash
+./leading_eight_with_errors ../Data
+```
+
+Or from the root of the repository:
+
+```bash
+build/L6_L3_payoff_difference Data/
+```
+
+After running all three scripts, navigate to the `Data` folder and you should see the following files:
+
+```bash
+equalizers_payoffs.csv
+L6_L3_payoff_difference.csv
+leading_eight_ESS_with_errors.csv
+README.md
+```
+
+<!-- To ceratyye the figure run the python script. 
+
+`src`. 
+
+if you are in the root write. fdollowing by the focation of the FDigure folder.
+
+If you are intersted in the indivial code  that creates eeach figure, the scipts
+can also be found the in the scripts folder.
+
+- Gebnerates Figure 1 an 3 -->
